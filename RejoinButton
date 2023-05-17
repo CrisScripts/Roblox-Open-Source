@@ -1,5 +1,9 @@
--- Highly Recommended to use autoexec 
 local gui = game:GetService("CoreGui").RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt")
+
+-- Check if the script is already running
+if gui.Size == UDim2.new(0, 400, 0, 230) then
+    return  -- Exit the script if it's already running
+end
 
 gui.Size = UDim2.new(0, 400, 0, 230)
 
